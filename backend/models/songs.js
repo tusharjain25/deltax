@@ -1,14 +1,13 @@
 module.exports=(sequelize,DataTypes)=>{
-    const artists=sequelize.define('artists',{
-      id: {
+    const songs=sequelize.define('songs',{
+        id: {
             type:DataTypes.INTEGER,
             primaryKey:true
             
          },
-        ArtistName:DataTypes.STRING,
-        Dob:DataTypes.STRING,
-        Bio:DataTypes.STRING,
-        
+        SongName:DataTypes.STRING,
+        DateofRelease:DataTypes.STRING,
+        Cover:DataTypes.STRING,
     },
     {
         createdAt:'create_at',
@@ -16,5 +15,5 @@ module.exports=(sequelize,DataTypes)=>{
 
     }
     )
-return artists
+return songs
 }

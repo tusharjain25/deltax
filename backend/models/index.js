@@ -8,4 +8,5 @@ db.sequelize.sync({force:false})
    console.log('yes re-sync')
 })
 db.artists=require('./artists')(sequelize,DataTypes)
+db.songs=require('./songs')(sequelize,DataTypes)
 module.exports=db;

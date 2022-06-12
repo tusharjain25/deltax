@@ -2,17 +2,20 @@ const graphql=require('graphql')
 const{
      GraphQLObjectType,
      GraphQLString,
-     GraphQLInt,
+     GraphQLScalarType,
+     GraphQLID
 }=graphql;
 
 
 const UserType=new GraphQLObjectType({
     name:'artist',
     fields:()=>({
-        id:{type:GraphQLInt},
-        name:{type:GraphQLString},
-        dob:{type:GraphQLString},
-        bio:{type:GraphQLString}
+        id:{type:GraphQLID},
+        ArtistName:{type:GraphQLString},
+        Dob:{type:GraphQLString},
+        Bio:{type:GraphQLString},
     })
-})
+}
+
+)
 module.exports=UserType;

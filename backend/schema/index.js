@@ -9,6 +9,7 @@ const{
 const{ USER_LIST}=require('./queries/user');
 const {USER_ADD}=require('./mutations/user');
 const{ SONG_LIST}=require('./queries/songs');
+const{SONG_ADD}=require('./mutations/songs');
 
 const RootQuery=new GraphQLObjectType({
     name:'query',
@@ -21,6 +22,7 @@ const Mutation=new GraphQLObjectType({
      name:'mutation',
      fields:{
         createUser:USER_ADD,
+        createSong:SONG_ADD,
       }
  })
 module.exports=new GraphQLSchema({query:RootQuery,mutation:Mutation})

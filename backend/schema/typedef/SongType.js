@@ -7,8 +7,7 @@ const{
 }=graphql;
 
 
-const SongType=new GraphQLObjectType(
-{
+const SongType=new GraphQLObjectType({
     name:'songs',
     fields:()=>({
         id:{type:GraphQLID},

@@ -2,6 +2,7 @@
 import './App.css';
 import { ApolloClient, InMemoryCache, ApolloProvider, } from "@apollo/client";
 import UserList from './components/UserList';
+import SongList from './components/SongList';
 
 function App() {
   const client = new ApolloClient({
@@ -12,8 +13,9 @@ function App() {
   return (
     <>
     <ApolloProvider client={client}>
-    <h1>hello</h1>
-   <UserList/>
+     
+    <div className='container'> <UserList/></div>
+    <div className='container'><SongList/></div>
     </ApolloProvider>
     </>
   );

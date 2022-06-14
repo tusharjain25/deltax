@@ -18,16 +18,17 @@ function App() {
     <>
     <ApolloProvider client={client}>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-          <Route path="AddArtist" element={<AddArtist />} />
-          <Route path="AddSong" element={<Addsong/>} />
-          <Route path="Userlist" element={<UserList />} />
-          <Route path="Songlist" element={<SongList/>} />
+    <Routes>
+      <Route path="/" element={<Home />}>
+        <Route index element={<Home />} />
+        <Route path="AddArtist" element={<AddArtist />}>
+          <Route path="Addsong" element={<Addsong />} />
+          <Route path="UserList" element={<UserList/>} />
+          <Route index element={<SongList />} />
         </Route>
-      </Routes>
-    </BrowserRouter>
+      </Route>
+    </Routes>
+  </BrowserRouter>
    
     </ApolloProvider>
     </>

@@ -1,14 +1,12 @@
-// import { } from "@apollo/client";
-// import {gql} from '@apollo/client';
-// import { GET_USER_LIST } from "../graphql/Queries";
-//  const GET_USER_LIST = gql`
-//   query Artists  {
-//    userList{
-     
-//       name,
-//       dob,
-//       bio,
 
-//     }
-//   }
-// `;
+
+import {gql} from '@apollo/client';
+ export const CREATE_USER = gql`
+  mutation createUser($ArtistName:String!,$Dob:String!,$Bio:String!)  {
+   createUser(ArtistName:$ArtistName,Dob:$Dob,Bio:$Bio){
+     
+      success,error,message
+
+    }
+  }
+`;
